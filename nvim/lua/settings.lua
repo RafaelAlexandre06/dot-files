@@ -3,6 +3,32 @@ require("nvim-treesitter.configs").setup {
   highlight = { enable = true },
 }
 
+-- Load Nvim Tree
+require("nvim-tree").setup({
+  view = {
+    width = 30,
+    side = "left",
+  },
+  renderer = {
+    icons = {
+      show = {
+        git = true,
+        folder = true,
+        file = true,
+        folder_arrow = true,
+      },
+    },
+  },
+  git = {
+    enable = true,
+  },
+  actions = {
+    open_file = {
+      quit_on_open = false,  -- keeps tree open when opening files
+    },
+  },
+})
+
 -- Autocomplete
 local cmp = require("cmp")
 cmp.setup({

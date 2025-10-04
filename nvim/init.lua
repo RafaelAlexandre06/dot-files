@@ -1,5 +1,6 @@
 -- ~/.config/nvim/init.lua
-
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -16,4 +17,4 @@ require("lazy").setup("plugins")
 -- Load settings, LSP, and keymaps
 require("settings")
 require("lsp")
---require("keymaps")
+require("keymaps")
