@@ -1,6 +1,7 @@
 require("nvim-treesitter.configs").setup {
   ensure_installed = { "c", "cpp", "java", "haskell" },
   highlight = { enable = true },
+  indent = { enable = true },
 }
 
 -- Load Nvim Tree
@@ -46,6 +47,7 @@ cmp.setup({
     { name = "buffer" },
   })
 })
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.cmd.colorscheme("catppuccin")
